@@ -9,8 +9,6 @@
     <?php wp_head();?> <!-- chargement de l'entete -->
 </head>
 <body>
-
-
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4"> <!-- navbar -->
             <a class="navbar-brand" href="#"><i class="fas fa-home"></i></a>
@@ -31,7 +29,7 @@
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
-        </nav>
+        </nav>  <!-- fin de navbar -->
     </header>
     <div class="container">
         <div class="jumbotron">
@@ -41,18 +39,26 @@
 
     <section>
         <div class="container">
-            <div class="row">
-                <div class="col-2">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/test.jpg" 
-                    alt="texte alternatif" class="img-fluid">
-                </div>
-                <div class="col-10">
-                    <h1>Titre de l'article</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sed doloremque doloribus.
-                     Ab impedit incidunt adipisci magni? Laborum minus maxime, quis, a iste eveniet optio 
-                     reprehenderit in eaque officia voluptatum.</p>
-                </div>
-            </div> <!-- fin row -->
+            <!-- Boucle WordPress -->
+            <?php if (have_posts()): ?>        
+                <?php while( have_posts()): the_post(); ?>
+                    <div class="row">
+                        <div class="col-2">
+                            <?php the_post_thumbnail('thumbnail') ?>
+                        </div>
+                        <div class="col-10">                        
+                            <h1><?php the_title(); ?></h1>
+                            <p><?php the_excerpt(); ?></p>
+                        </div>
+                    </div> <!-- fin row -->
+                <?php endwhile; ?>
+            <?php else: ?>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Aucun article trouvé</p>                            
+                    </div>
+                </div><!-- fin de row -->
+            <?php endif; ?><!-- fin de la boucle Wordpress -->        
         </div><!-- fin container -->
     </section>
     <?php wp_footer();?>
