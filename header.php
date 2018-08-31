@@ -36,3 +36,5 @@
             <h1>Site de test</h1>
         </div> <!-- fin jumbotron -->
     </div> <!-- fin container -->
+    <section>        
+        <div class="container">
