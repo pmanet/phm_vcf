@@ -11,25 +11,29 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4"> <!-- navbar -->
-            <a class="navbar-brand" href="#"><i class="fas fa-home"></i></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="<?php echo site_url(); ?>"><i class="fas fa-home"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Link <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
-                </ul>
+                <?php
+                    wp_nav_menu([
+                        'menu'            => 'primary',
+                        'theme_location'  => 'primary',
+                        'container'       => 'div',
+                        'container_id'    => 'bs4navbar',
+                        'container_class' => 'collapse navbar-collapse',
+                        'menu_id'         => false,
+                        'menu_class'      => 'navbar-nav mr-auto',
+                        'depth'           => 2,
+                        'fallback_cb'     => 'bs4navwalker::fallback',
+                        'walker'          => new bs4navwalker()
+                    ]);
+                ?>
                 <form class="form-inline mt-2 mt-md-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Rechercher" aria-label="Rechercher">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
                 </form>
-            </div>
-        </nav>  <!-- fin de navbar -->
+        </nav> <!-- fin de navbar -->
     </header>
     <div class="container">
         <div class="jumbotron">
@@ -37,7 +41,7 @@
         </div> <!-- fin jumbotron -->
     </div> <!-- fin container -->
 
-    <section>
+    <section>        
         <div class="container">
             <!-- Boucle WordPress -->
             <?php if (have_posts()): ?>        

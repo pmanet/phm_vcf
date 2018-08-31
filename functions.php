@@ -40,5 +40,11 @@ function phmvcf_setup() {
     // support du titre
     add_theme_support('title-tag');
 
+    // Les Menus
+    // Include custom navwalker
+    require_once('includes/bs4navwalker.php');
+    // active la gestion des menus
+    register_nav_menus( array('primary' => 'principal' ));
+
 } // fin phmvcf_setup
 add_action('after_setup_theme', 'phmvcf_setup');
