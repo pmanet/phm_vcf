@@ -33,7 +33,8 @@
     </header>
     <div class="container">
         <div class="jumbotron">
-            <h1>Site de test</h1>
+            <h1><img class="img-fluid" src="<?php echo get_template_directory_uri() . '/assets/mini_logo.jpg'; ?>" alt="Logo du Vcf">
+            Site de test</h1>
         </div> <!-- fin jumbotron -->
     </div> <!-- fin container -->
     <section>        

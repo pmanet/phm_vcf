@@ -1,17 +1,17 @@
 <?php
 
-define('PHMVCF_VERSION', '1.0.0');
+define("PHMVCF_VERSION", "1.0.0");
 /**
  * Chargement des style et des scripts
  */
 function phmvcf_scripts() {
     // Chargement des css
     wp_enqueue_style( 'vcfphm_bootstrap-core', get_stylesheet_directory_uri() . '/css/bootstrap.min.css', 
-    array(), PHMVCF_VERSION, all );
+    array(), PHMVCF_VERSION, 'all' );
     wp_enqueue_style( 'vcfphm_fontawesome', get_stylesheet_directory_uri() . '/css/all.min.css', 
-    array('vcfphm_bootstrap-core'), PHMVCF_VERSION, all );
+    array('vcfphm_bootstrap-core'), PHMVCF_VERSION, 'all' );
     wp_enqueue_style( 'vcfphm_style', get_stylesheet_directory_uri() . '/style.css', 
-    array('vcfphm_bootstrap-core'), PHMVCF_VERSION, all );
+    array('vcfphm_bootstrap-core'), PHMVCF_VERSION, 'all' );
 
     // Chargement des javascripts
     wp_enqueue_script( 'vcfphm_bootstrap-js', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array('jquery'), PHMVCF_VERSION, true );
