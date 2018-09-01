@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4"> <!-- navbar -->
+        <nav class="navbar navbar-entete navbar-expand-md navbar-dark bg-dark mb-4"> <!-- navbar -->
             <a class="navbar-brand" href="<?php echo site_url(); ?>"><i class="fas fa-home"></i></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -31,11 +31,16 @@
             ?>
         </nav> <!-- fin de navbar -->
     </header>
-    <div class="container">
-    <div class="jumbotron">
-        <h1><img class="img-fluid" src="<?php echo get_template_directory_uri() . '/assets/mini_logo.jpg'; ?>" alt="Logo du Vcf">
-            Site de test</h1>
-        </div> <!-- fin jumbotron -->
+    <div class="container d-none d-sm-block">
+        <div class="row">
+            <div class="col-12 col-sm-12  img-entete">
+                <img class="img-fluid" src="<?php echo get_template_directory_uri() . '/assets/entete.jpg'; ?>" alt="Entete du site ventureclubdefrance.com">                    
+            </div>
+        </div>
+        <!-- <div class="jumbotron">
+            <h1><img class="img-fluid" src="<?php echo get_template_directory_uri() . '/assets/mini_logo.jpg'; ?>" alt="Logo du Vcf">
+                Site de test</h1>
+        </div> fin jumbotron -->
     </div> <!-- fin container -->
     <section>
         <div class="container">

@@ -15,6 +15,10 @@ Text Domain: phm_vcf
     padding-left: 0;
 }
 
+/* nav.navbar-entete {
+    margin-bottom: 0!important;
+} */
+
 #footer {
     background-color: gray;
     margin-top: 2em;
@@ -23,4 +27,8 @@ Text Domain: phm_vcf
 
 #footer a {
     color: yellow;
+}
+
+.img-entete {
+    margin-bottom: 1.5em;
 }
