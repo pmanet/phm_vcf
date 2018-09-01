@@ -14,3 +14,13 @@ Text Domain: phm_vcf
     margin-left: 0;
     padding-left: 0;
 }
+
+#footer {
+    background-color: gray;
+    margin-top: 2em;
+    color: white;
+}
+
+#footer a {
+    color: yellow;
+}

@@ -1,6 +1,6 @@
 </div><!-- fin container -->
     </section>
-    <footer>
+    <footer id="footer">
         <div class="container"><!-- container -->
             <div class="row"><!-- row -->
                 <div class="col-12">

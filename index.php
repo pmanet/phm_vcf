@@ -6,10 +6,10 @@
                 <?php while( have_posts()): the_post(); ?>
                     <div class="row">
                         <div class="col-4 col-lg-2">
-                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail', array( 'class' => 'img-fluid img-thumbnail' )) ?></a>
+                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail', array( 'class' => 'img-fluid img-thumbnail rounded-circle' )) ?></a>
                         </div>
                         <div class="col-8 col-lg-10">                        
-                            <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+                            <h2 class="h3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                             <p><?php the_excerpt(); ?></p>
                         </div>
                     </div> <!-- fin row -->
