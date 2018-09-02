@@ -44,3 +44,9 @@
     </div> <!-- fin container -->
     <section>
         <div class="container">
+            <div class="row">
+                <?php if ( is_active_sidebar( 'sidebar_right' ) ) : ?>
+                    <div class="col-12 col-md-8">
+                <?php else: ?>
+                    <div class="col-12">
+                <?php endif; ?>

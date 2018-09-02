@@ -1,4 +1,5 @@
-</div><!-- fin container -->
+            </div>
+        </div><!-- fin container -->
     </section>
     <footer id="footer">
         <div class="container"><!-- container -->

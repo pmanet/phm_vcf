@@ -21,7 +21,7 @@ function phmvcf_scripts() {
 } // fin phmvcf_scripts
 add_action( 'wp_enqueue_scripts', 'phmvcf_scripts' );
 
-//=====================================
+//*=====================================
 //
 //  UTILITAIRES
 // 
@@ -46,5 +46,23 @@ function phmvcf_setup() {
     // active la gestion des menus
     register_nav_menus( array('primary' => 'principal' ));
 
+
 } // fin phmvcf_setup
 add_action('after_setup_theme', 'phmvcf_setup');
+
+/**
+ * Register our sidebars and widgetized areas.
+ */
+function phm_vcf_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Barre latérale droite',
+		'id'            => 'sidebar_right',
+		'before_widget' => '<section class="card card-widget">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<div class="card-header bg-info text-white"><h4 class="h5">',
+		'after_title'   => '</h4></div>',
+	) );
+
+}
+add_action( 'widgets_init', 'phm_vcf_widgets_init' );

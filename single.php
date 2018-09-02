@@ -35,5 +35,7 @@
                 <p>Aucun article trouvé</p>                            
             </div>
         </div><!-- fin de row -->
-    <?php endif; ?><!-- fin de la boucle Wordpress -->        
+    <?php endif; ?><!-- fin de la boucle Wordpress -->
+    </div>       
+<?php get_sidebar(); ?>            
 <?php get_footer(); ?>
