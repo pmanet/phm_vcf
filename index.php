@@ -14,7 +14,7 @@
                         </div>
                         <div class="col-8 col-lg-10">                        
                             <h2 class="h3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                            <p><?php the_excerpt(); ?></p>
+                            <p><?php the_content(); ?></p>
                         </div>
                     </div> <!-- fin row -->
                 <?php endwhile; ?>
