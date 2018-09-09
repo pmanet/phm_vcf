@@ -1,8 +1,0 @@
-<?php
-
-?>
-
-                
-        </div>
-    </div>
-</section>
